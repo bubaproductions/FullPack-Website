@@ -1,0 +1,10 @@
+# source materials kept out of the public site (the brochure is published from assets/, the FEFCO catalogue is third-party)
+BROCHURE FULL PACK.pdf
+Box Schema.pdf
+Logo.jpeg
+# local tooling
+.claude/
+.wrangler/
+node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full Pack · Imballaggi in cartone ondulato</title>
+  <meta name="description" content="Full Pack S.r.l. — progettazione, stampa e produzione di imballaggi in cartone ondulato in Campania. ISO 9001:2015 e FSC® Chain-of-Custody.">
+  <link rel="icon" href="assets/logo.png">
+  <meta name="theme-color" content="#0b0a09">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Full Pack · Imballaggi in cartone ondulato">
+  <meta property="og:description" content="Progettazione, stampa e produzione di imballaggi in cartone ondulato in Campania. ISO 9001:2015 e FSC® Chain-of-Custody.">
+  <meta property="og:image" content="assets/corrugator.jpg">
+  <meta property="og:locale" content="it_IT">
+  <link rel="canonical" href="https://www.fullpack.it/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Full Pack S.r.l.","url":"https://www.fullpack.it/","email":"info@fullpack.it","telephone":"+39 06 87501019","logo":"assets/logo.png","vatID":"IT01665060628",
+   "address":{"@type":"PostalAddress","streetAddress":"Viale Guglielmo Marconi 207","postalCode":"80020","addressLocality":"Casavatore","addressRegion":"NA","addressCountry":"IT"},
+   "location":[{"@type":"Place","name":"Stabilimento Aiello del Sabato","address":{"@type":"PostalAddress","streetAddress":"S.P. 64","postalCode":"83020","addressLocality":"Aiello del Sabato","addressRegion":"AV","addressCountry":"IT"}},
+                {"@type":"Place","name":"Stabilimento Nusco","address":{"@type":"PostalAddress","streetAddress":"C.da Fiorentino, snc","postalCode":"83051","addressLocality":"Nusco","addressRegion":"AV","addressCountry":"IT"}},
+                {"@type":"Place","name":"Stabilimento Torre Le Nocelle","address":{"@type":"PostalAddress","streetAddress":"C.da Campoceraso, Area PIP, snc","postalCode":"83030","addressLocality":"Torre Le Nocelle","addressRegion":"AV","addressCountry":"IT"}}],
+   "hasCredential":["UNI EN ISO 9001:2015","FSC Chain-of-Custody"]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/" } }</script>
+</head>
+<body>
+
+<!-- preloader -->
+<div class="loader" id="loader">
+  <img src="assets/logo-white.png" alt="Full Pack" class="loader-logo">
+  <div class="loader-num mono"><span id="loader-num">00</span></div>
+  <div class="loader-bar"><i id="loader-bar"></i></div>
+</div>
+
+<!-- ticker -->
+<div class="ticker mono">
+  <div class="ticker-track" id="ticker">
+    <span data-i18n="tk1">Casavatore (NA)</span><span>·</span><span data-i18n="tk2">Aiello del Sabato (AV)</span><span>·</span><span data-i18n="tk3">Nusco (AV)</span><span>·</span><span data-i18n="tk4">Torre Le Nocelle (AV)</span><span>·</span>
+    <span>ISO 9001:2015</span><span>·</span><span>FSC® Chain-of-Custody</span><span>·</span><span data-i18n="tk5">Casse americane</span><span>·</span><span data-i18n="tk6">Fustellati</span><span>·</span><span data-i18n="tk7">Espositori</span><span>·</span><span data-i18n="tk8">Alveari</span><span>·</span><span data-i18n="tk9">Stampa flexo, offset e Pre-Print fino a 8 colori</span><span>·</span>
+  </div>
+</div>
+
+<!-- nav -->
+<header class="nav" id="nav">
+  <a href="#" class="nav-logo" aria-label="Full Pack">
+    <img src="assets/logo-white.png" alt="" class="logo-light">
+    <img src="assets/logo.png" alt="" class="logo-dark">
+  </a>
+  <nav class="nav-links">
+    <a href="#azienda" data-i18n="n1">Azienda</a>
+    <a href="#prodotti" data-i18n="n2">Prodotti</a>
+    <a href="#processo" data-i18n="n3">Processo</a>
+    <a href="#qualita" data-i18n="n4">Qualità</a>
+    <a href="#sedi" data-i18n="n5">Sedi</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang mono" id="lang"><button data-lang="it" class="is-on">IT</button><span>/</span><button data-lang="en">EN</button></div>
+    <a href="#preventivo" class="btn btn-solid" data-i18n="n6">Richiedi un preventivo</a>
+    <button class="nav-burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#azienda" data-i18n="n1">Azienda</a>
+  <a href="#prodotti" data-i18n="n2">Prodotti</a>
+  <a href="#processo" data-i18n="n3">Processo</a>
+  <a href="#qualita" data-i18n="n4">Qualità</a>
+  <a href="#sedi" data-i18n="n5">Sedi</a>
+  <a href="#preventivo" data-i18n="n6">Richiedi un preventivo</a>
+</div>
+
+<!-- hero / story: sticky 3D stage + scrolling panels, one panel per phase -->
+<section class="story" id="hero">
+  <div class="story-stage">
+    <canvas id="hero-canvas" class="story-canvas"></canvas>
+    <aside class="rail mono" id="rail"><div class="rail-item"><span>01</span><b data-i18n="r1">Carta</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>02</span><b data-i18n="r2">Onda</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>03</span><b data-i18n="r3">Ponte</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>04</span><b data-i18n="r4">Taglio</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>05</span><b data-i18n="r5">Pila</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>06</span><b data-i18n="r6">Stampa</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>07</span><b data-i18n="r7">Slotter</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>08</span><b data-i18n="r8">Piega</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>09</span><b data-i18n="r9">Pallet</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>10</span><b data-i18n="r10">Carico</b><span class="rail-bar"><i></i></span></div><div class="rail-item"><span>11</span><b data-i18n="r11">Partenza</b><span class="rail-bar"><i></i></span></div></aside>
+    <div class="scroll-hint mono" id="hint"><i></i><span data-i18n="hint">Scorri per seguire il viaggio di una scatola</span></div>
+    <div class="story-fade" id="hero-fade"></div>
+  </div>
+
+  <div class="story-panels" id="panels">
+    <article class="panel" data-stage="0" data-len="1.6" style="--len:1.6">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono" data-i18n="h0e">Full Pack S.r.l. — Scatolificio, Campania</span>
+        <h1 class="hero-title"><span class="line"><span data-i18n="h0t1">Proteggiamo</span></span><span class="line"><span data-i18n="h0t2">le vostre</span></span><span class="line"><span data-i18n="h0t3">idee</span></span></h1>
+        <p class="hero-sub" data-i18n="h0p">Dalla bobina di carta alla cassa americana consegnata: il nostro processo, macchina per macchina, come avviene davvero nei nostri stabilimenti.</p>
+        <div class="hero-btns">
+          <a href="#contatti" class="btn btn-solid" data-i18n="h0b1">Parliamone</a>
+          <a href="#prodotti" class="btn btn-ghost" data-i18n="h0b2">I nostri prodotti</a>
+        </div>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="1" data-len="1.8" style="--len:1.8">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>01</em> <span data-i18n="p1e">Svolgimento e preriscaldo</span></span>
+        <h2 class="hero-h2"><span data-i18n="p1t">Due carte, una bobina alla volta</span></h2>
+        <p class="hero-sub" data-i18n="p1p">Sui porta-bobine a bracci la copertina kraft e la carta per onda si svolgono da bobine di 1,25 m di diametro. Ogni carta avvolge i cilindri preriscaldatori cromati, scaldati a vapore, per entrare nel single facer alla giusta temperatura e umidità.</p>
+        <ul class="specs mono"><li><span data-i18n="p1a">Bobine</span><b data-i18n="p1av">Ø 1.250 mm · larghezza 2.500 mm</b></li><li><span data-i18n="p1b">Copertina</span><b data-i18n="p1bv">Kraftliner 115–200 g/m²</b></li><li><span data-i18n="p1c">Carta per onda</span><b data-i18n="p1cv">Semichimica 90–130 g/m²</b></li><li><span data-i18n="p1d">Preriscaldatore</span><b data-i18n="p1dv">Cilindro Ø 900 mm, vapore</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="2" data-len="2.0" style="--len:2.0">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>02</em> <span data-i18n="p2e">Single facer</span></span>
+        <h2 class="hero-h2"><span data-i18n="p2t">Nasce l'onda</span></h2>
+        <p class="hero-sub" data-i18n="p2p">Tra i due cilindri ondulatori scanalati, a 180 °C, la carta per onda prende la forma sinusoidale. Il rullo incollatore deposita la colla d'amido solo sulle creste; il rullo di pressione vi salda la prima copertina. La singola faccia sale verso il ponte.</p>
+        <ul class="specs mono"><li><span data-i18n="p2a">Onda</span><b data-i18n="p2av">C · 128 onde/m · 3,6 mm</b></li><li><span data-i18n="p2b">Cilindri ondulatori</span><b data-i18n="p2bv">171–188 °C, scanalati</b></li><li><span data-i18n="p2c">Colla</span><b data-i18n="p2cv">Amido, solo sulle creste</b></li><li><span data-i18n="p2d">Velocità</span><b data-i18n="p2dv">fino a 350 m/min</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="3" data-len="2.2" style="--len:2.2">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>03</em> <span data-i18n="p3e">Ponte e double facer</span></span>
+        <h2 class="hero-h2"><span data-i18n="p3t">La seconda copertina</span></h2>
+        <p class="hero-sub" data-i18n="p3p">Sul ponte la singola faccia si accumula in festoni, il polmone che disaccoppia wet end e dry end. Scende nell'incollatrice, dove un secondo rullo bagna d'amido le creste, e incontra la copertina inferiore nel double facer: piastre calde a vapore e un tappeto zavorrato saldano il foglio e lo asciugano.</p>
+        <ul class="specs mono"><li><span data-i18n="p3a">Ponte</span><b data-i18n="p3av">Festoni, 20–40 m di polmone</b></li><li><span data-i18n="p3b">Piastre calde</span><b data-i18n="p3bv">175 °C, vapore a 10 bar</b></li><li><span data-i18n="p3c">Tappeto</span><b data-i18n="p3cv">Zavorrato con rulli</b></li><li><span data-i18n="p3d">Lunghezza</span><b data-i18n="p3dv">15–20 m di riscaldo</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="4" data-len="2.2" style="--len:2.2">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>04</em> <span data-i18n="p4e">Slitter-scorer e taglierina</span></span>
+        <h2 class="hero-h2"><span data-i18n="p4t">Il foglio di cartone</span></h2>
+        <p class="hero-sub" data-i18n="p4p">Lo slitter-scorer taglia la fascia in quattro strisce con i coltelli circolari al carburo e imprime le cordonature delle falde con le ruote maschio/femmina. La taglierina rotativa a lame elicoidali produce i fogli a misura, che si embricano sul nastro e scendono sull'impilatore.</p>
+        <ul class="specs mono"><li><span data-i18n="p4a">Strisce</span><b data-i18n="p4av">4 × 600 mm</b></li><li><span data-i18n="p4b">Foglio</span><b data-i18n="p4bv">1.435 × 600 mm</b></li><li><span data-i18n="p4c">Taglierina</span><b data-i18n="p4cv">Lame elicoidali, ±1 mm</b></li><li><span data-i18n="p4d">Pila</span><b data-i18n="p4dv">Impilatore a piattaforma discendente</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="5" data-len="2.0" style="--len:2.0">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>05</em> <span data-i18n="p5e">Trasferimento e alimentazione</span></span>
+        <h2 class="hero-h2"><span data-i18n="p5t">Dal pallet alla pila</span></h2>
+        <p class="hero-sub" data-i18n="p5p">Il carrello preleva il bancale di fogli dall'impilatore e lo porta al sollevatore del casemaker. La pila sale a quota tavola e viene spinta sul mettifoglio: le cinghie a vuoto prendono il foglio dal fondo della pila e lo accelerano verso il primo gruppo stampa.</p>
+        <ul class="specs mono"><li><span data-i18n="p5a">Bancale</span><b data-i18n="p5av">1.000 × 1.200 mm, 200 fogli</b></li><li><span data-i18n="p5b">Mettifoglio</span><b data-i18n="p5bv">Cinghie a vuoto, lead-edge</b></li><li><span data-i18n="p5c">Presa</span><b data-i18n="p5cv">Dal fondo della pila</b></li><li><span data-i18n="p5d">Cadenza</span><b data-i18n="p5dv">fino a 24.000 fogli/ora</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="6" data-len="2.2" style="--len:2.2">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>06</em> <span data-i18n="p6e">Stampa flexo</span></span>
+        <h2 class="hero-h2"><span data-i18n="p6t">Stampato dal basso, a registro</span></h2>
+        <p class="hero-sub" data-i18n="p6p">In ogni gruppo flexo la racla a camera dosa l'inchiostro all'acqua sull'anilox ceramico, l'anilox lo cede al cliché fotopolimerico e il cilindro di pressione lo trasferisce sul cartone, con il lato stampa rivolto in basso. Due colori: il rosso Full Pack e il nero.</p>
+        <ul class="specs mono"><li><span data-i18n="p6a">Anilox</span><b data-i18n="p6av">Ceramico, 250 linee/pollice</b></li><li><span data-i18n="p6b">Cliché</span><b data-i18n="p6bv">Fotopolimero 3,94 mm</b></li><li><span data-i18n="p6c">Inchiostri</span><b data-i18n="p6cv">All'acqua, essiccati per assorbimento</b></li><li><span data-i18n="p6d">Registro</span><b data-i18n="p6dv">±0,5 mm, controllo automatico</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="7" data-len="1.8" style="--len:1.8">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>07</em> <span data-i18n="p7e">Cordonatura e slottatura</span></span>
+        <h2 class="hero-h2"><span data-i18n="p7t">Cordoni e intagli</span></h2>
+        <p class="hero-sub" data-i18n="p7p">Le ruote cordonatrici maschio/femmina imprimono le quattro pieghe verticali; i coltelli slotter aprono gli intagli fra le falde e rifilano la linguetta d'incollaggio, mentre lo sfrido viene aspirato. Il foglio è ora lo sviluppo piano di una cassa americana FEFCO 0201.</p>
+        <ul class="specs mono"><li><span data-i18n="p7a">Intaglio</span><b data-i18n="p7av">7 mm, a forbice rotativa</b></li><li><span data-i18n="p7b">Linguetta</span><b data-i18n="p7bv">35 mm, onda schiacciata</b></li><li><span data-i18n="p7c">Cordoni</span><b data-i18n="p7cv">4 verticali + 2 orizzontali</b></li><li><span data-i18n="p7d">Modello</span><b data-i18n="p7dv">FEFCO 0201 · L 400 × W 300 × H 300</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="8" data-len="2.6" style="--len:2.6">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>08</em> <span data-i18n="p8e">Piegatura, incollaggio, pacco</span></span>
+        <h2 class="hero-h2"><span data-i18n="p8t">Chiusa piatta, pronta da montare</span></h2>
+        <p class="hero-sub" data-i18n="p8p">Le guide curve ripiegano a 180° prima la fiancata con la linguetta: la testa di incollaggio vi deposita i cordoli di colla, poi l'altra fiancata si posa sopra. La cassa esce piatta con la stampa rivolta in alto; il contatore-espulsore forma pacchi da 25 casse, pressati e reggiati con due regge in PP.</p>
+        <ul class="specs mono"><li><span data-i18n="p8a">Colla</span><b data-i18n="p8av">PVA a freddo, a cordoli</b></li><li><span data-i18n="p8b">Giunzione</span><b data-i18n="p8bv">Gap 3–12 mm, controllato</b></li><li><span data-i18n="p8c">Pieghe</span><b data-i18n="p8cv">2 × 180° su guide e tappeti</b></li><li><span data-i18n="p8d">Pacco</span><b data-i18n="p8dv">25 casse, 2 regge PP</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="9" data-len="2.6" style="--len:2.6">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>09</em> <span data-i18n="p9e">Pallettizzazione e avvolgimento</span></span>
+        <h2 class="hero-h2"><span data-i18n="p9t">Un bancale ogni 450 casse</span></h2>
+        <p class="hero-sub" data-i18n="p9p">Il pallettizzatore a portale dispone i pacchi a strati alternati su un bancale EPAL; angolari in cartone e regge in PET bloccano il carico. Sulla tavola rotante il carrello porta-film sale e scende avvolgendo il bancale con film estensibile prestirato.</p>
+        <ul class="specs mono"><li><span data-i18n="p9a">Bancale</span><b data-i18n="p9av">EPAL 1.200 × 800 × 144 mm</b></li><li><span data-i18n="p9b">Carico</span><b data-i18n="p9bv">18 pacchi, 9 strati, 1,8 m</b></li><li><span data-i18n="p9c">Regge</span><b data-i18n="p9cv">PET verdi, 2 + 2 incrociate</b></li><li><span data-i18n="p9d">Film</span><b data-i18n="p9dv">23 µm, prestiro 250 %</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="10" data-len="3.0" style="--len:3.0">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>10</em> <span data-i18n="p10e">Carico</span></span>
+        <h2 class="hero-h2"><span data-i18n="p10t">Trentatré bancali per viaggio</span></h2>
+        <p class="hero-sub" data-i18n="p10p">Lo stesso carrello preleva il bancale avvolto e lo carica dal fianco del semirimorchio centinato, con la tenda aperta: due file di bancali EPAL per tutta la lunghezza. Forche a 1,25 m, inserimento sul piano, ritiro.</p>
+        <ul class="specs mono"><li><span data-i18n="p10a">Semirimorchio</span><b data-i18n="p10av">13,6 m · 33 EPAL</b></li><li><span data-i18n="p10b">Carrello</span><b data-i18n="p10bv">Controbilanciato 2,5 t</b></li><li><span data-i18n="p10c">Piano di carico</span><b data-i18n="p10cv">1.250 mm da terra</b></li></ul>
+      </div></div>
+    </article>
+    <article class="panel" data-stage="11" data-len="4.0" style="--len:4.0">
+      <div class="panel-inner"><div class="panel-copy">
+        <span class="eyebrow mono"><em>11</em> <span data-i18n="p11e">Partenza</span></span>
+        <h2 class="hero-h2"><span data-i18n="p11t">Consegnato puntuale</span></h2>
+        <p class="hero-sub" data-i18n="p11p">Tenda chiusa e tensionata, DDT firmato. Dai nostri stabilimenti in Campania al vostro magazzino: un servizio sicuro e puntuale, con un'attenzione particolare alla salute e all'ambiente.</p>
+        <ul class="specs mono"><li><span data-i18n="p11a">Sedi</span><b data-i18n="p11av">4 tra Napoli e Avellino</b></li><li><span data-i18n="p11b">Servizio</span><b data-i18n="p11bv">Sicuro e puntuale</b></li><li><span data-i18n="p11c">Ambiente</span><b data-i18n="p11cv">Materie prime certificate e riciclabili</b></li></ul><div class="hero-btns"><a href="#contatti" class="btn btn-solid" data-i18n="h6b">Richiedi un preventivo</a></div>
+      </div></div>
+    </article>
+  </div>
+</section>
+
+<!-- azienda -->
+<section class="section section-light" id="azienda">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-media reveal">
+        <img src="assets/corrugator.jpg" alt="Linea di ondulazione Full Pack" class="intro-img">
+        <div class="intro-caption mono"><span data-i18n="a_cap">Linea di ondulazione — stabilimento di Aiello del Sabato (AV)</span></div>
+      </div>
+      <div class="intro-copy">
+        <span class="eyebrow mono reveal" data-i18n="a_e">L'azienda</span>
+        <h2 class="h2 reveal"><span data-i18n="a_t">Produciamo imballaggi. Ci prendiamo cura delle vostre idee.</span></h2>
+        <p class="lead reveal" data-i18n="a_p1">L'elevata qualità delle lavorazioni, l'affidabilità di un servizio sicuro e puntuale, il costante aggiornamento del parco macchine e delle professionalità interne hanno fatto della Full Pack una realtà imprenditoriale dedita all'innovazione e alla qualità gestionale, con un'attenzione particolare ai temi della salute e al rispetto dell'ambiente.</p>
+        <p class="reveal" data-i18n="a_p2">La filosofia di lavoro ci spinge a instaurare con i nostri clienti un rapporto di collaborazione, per assicurare la miglior soluzione auspicabile nell'ottica di un continuo miglioramento del prodotto.</p>
+        <div class="links-row reveal"><a href="#processo" class="link-arrow" data-i18n="a_l">Scopri il processo</a><a href="assets/fullpack-brochure.pdf" class="link-arrow" download data-i18n="a_br">Scarica la brochure (PDF)</a></div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><b>4</b><span data-i18n="s1">Sedi in Campania</span></div>
+      <div class="stat reveal"><b>ISO 9001</b><span data-i18n="s2">Qualità certificata UNI EN ISO 9001:2015</span></div>
+      <div class="stat reveal"><b>FSC®</b><span data-i18n="s3">Chain-of-Custody: carte da foreste gestite responsabilmente</span></div>
+      <div class="stat reveal"><b>8</b><span data-i18n="s4">Colori di stampa flexo, offset e Pre-Print</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- processo -->
+<section class="section section-kraft" id="processo">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow mono reveal" data-i18n="p_e">Il processo</span>
+      <h2 class="h2 reveal"><span data-i18n="p_t">Un'unica azienda, dalla bobina alla consegna.</span></h2>
+    </div>
+    <ol class="process"><li class="reveal"><span class="mono">01</span><h3 data-i18n="r1">Carta</h3><p data-i18n="pp1">Bobine kraft e carta per onda, preriscaldate a vapore sui cilindri cromati.</p></li><li class="reveal"><span class="mono">02</span><h3 data-i18n="r2">Onda</h3><p data-i18n="pp2">Cilindri ondulatori a 180 °C, colla d'amido sulle creste, prima copertina.</p></li><li class="reveal"><span class="mono">03</span><h3 data-i18n="r3">Foglio</h3><p data-i18n="pp3">Double facer a piastre calde, slitter-scorer, taglierina rotativa, impilatore.</p></li><li class="reveal"><span class="mono">04</span><h3 data-i18n="r4">Stampa</h3><p data-i18n="pp4">Flexo post-print: anilox ceramico, cliché fotopolimerico, inchiostri all'acqua.</p></li><li class="reveal"><span class="mono">05</span><h3 data-i18n="r5">Slotter</h3><p data-i18n="pp5">Cordonatura maschio/femmina, intagli fra le falde, rifilo della linguetta.</p></li><li class="reveal"><span class="mono">06</span><h3 data-i18n="r6">Piega</h3><p data-i18n="pp6">Due pieghe a 180° su guide e tappeti, colla PVA sulla linguetta, cassa piatta.</p></li><li class="reveal"><span class="mono">07</span><h3 data-i18n="r7">Pallet</h3><p data-i18n="pp7">Pacchi da 25 reggiati, bancale EPAL, angolari, regge PET, film estensibile.</p></li><li class="reveal"><span class="mono">08</span><h3 data-i18n="r8">Consegna</h3><p data-i18n="pp8">Carico laterale sul centinato con carrello, 33 bancali per viaggio.</p></li></ol>
+  </div>
+</section>
+
+<!-- prodotti -->
+<section class="section section-light" id="prodotti">
+  <div class="container">
+    <div class="section-head split">
+      <div>
+        <span class="eyebrow mono reveal" data-i18n="pr_e">I prodotti</span>
+        <h2 class="h2 reveal"><span data-i18n="pr_t">Tutto ciò che serve al vostro prodotto, in cartone.</span></h2>
+      </div>
+      <p class="lead reveal" data-i18n="pr_p">Una gamma di linee produttive altamente flessibili permette la totale personalizzazione degli imballi, dalle piccole dimensioni ai grandi formati, con stampa in alta definizione.</p>
+    </div>
+    <div class="products">
+      <article class="product reveal"><div class="product-img"><img src="assets/boxes.jpg" alt=""></div><h3 data-i18n="pr1t">Casse americane</h3><p data-i18n="pr1p">La tradizionale scatola in cartone ondulato a slottatura regolare, prodotta da casemakers in linea che stampano, tagliano, piegano e incollano in un'unica soluzione, fino a 4 colori flexo.</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/wineboxes.jpg" alt=""></div><h3 data-i18n="pr2t">Fustellati</h3><p data-i18n="pr2p">Vassoi standard e wrap-around per linee automatiche, espositori, divisori, interni e interfalde stampate. Qualsiasi forma, con fustelle rotative di medio-grandi dimensioni.</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/display.jpg" alt=""></div><h3 data-i18n="pr3t">Espositori e imballaggi speciali</h3><p data-i18n="pr3p">Espositori automontanti, fondo e coperchio preincollati per il punto vendita (Pack&amp;Show), fondi automatici, pallet in cartone ondulato e prodotti ad hoc sviluppati in partnership.</p></article>
+      <article class="product reveal"><div class="product-img"><img src="assets/forklift.jpg" alt=""></div><h3 data-i18n="pr4t">Scatole di grandi dimensioni</h3><p data-i18n="pr4p">Per prodotti voluminosi e ingombranti, anche a doppia onda: proteggono dagli urti e dalla pressione della sovrapposizione e riducono il numero di spedizioni.</p></article>
+      <article class="product reveal"><div class="product-img product-ico"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 30h80v60H20z"/><path d="M40 30v60M60 30v60M80 30v60M20 50h80M20 70h80"/></svg></div><h3 data-i18n="pr5t">Alveari</h3><p data-i18n="pr5p">Separatori per vetreria e imbottigliamento (acqua, vino, birra e alcolici), flaconi e ampolle per cosmetica e farmaceutica, micro alveari per l'elettronica, maxi alveari per l'industria.</p></article>
+      <article class="product reveal"><div class="product-img product-ico"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 40h90M15 60h90M15 80h90"/><path d="M15 40c10-10 20-10 30 0s20 10 30 0 20-10 30 0" opacity=".5"/></svg></div><h3 data-i18n="pr6t">Interfalde e fogli in cartone</h3><p data-i18n="pr6p">Interfalde antiscivolo in fogli o lastre, separatori per bancali, protezione dei bordi e coperture, in tutte le composizioni e spessori d'onda.</p></article>
+      <article class="product reveal"><div class="product-img product-ico"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="60" cy="60" r="34"/><circle cx="60" cy="60" r="14"/><path d="M60 26v68M26 60h68" opacity=".5"/></svg></div><h3 data-i18n="pr7t">Stampa offset e HD</h3><p data-i18n="pr7p">Offset per il massimo in resa cromatica e precisione, flexo diretta ad alta definizione in tricromia e quadricromia, anche su carte patinate o con verniciatura.</p></article>
+      <article class="product reveal"><div class="product-img product-ico"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 90V40l40-20 40 20v50"/><path d="M20 40l40 20 40-20M60 60v30"/></svg></div><h3 data-i18n="pr8t">Pre-Print</h3><p data-i18n="pr8p">La copertina viene stampata in bobina e ribobinata prima dell'ondulatore: definizione da stampa diretta, fino a 8 colori, con costi del prodotto finale ridotti.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- settori -->
+<section class="section section-kraft" id="settori">
+  <div class="container">
+    <div class="section-head split">
+      <div>
+        <span class="eyebrow mono reveal" data-i18n="st_e">I settori</span>
+        <h2 class="h2 reveal"><span data-i18n="st_t">Imballi pensati per il vostro prodotto.</span></h2>
+      </div>
+      <p class="lead reveal" data-i18n="st_p">Ogni settore ha esigenze diverse di protezione, logistica e presentazione: sviluppiamo l'imballo insieme a voi, dal campione alla produzione in serie.</p>
+    </div>
+    <div class="sectors">
+      <article class="sector reveal"><span class="mono">01</span><h3 data-i18n="st1t">Alimentare e bevande</h3><p data-i18n="st1p">Casse per acqua, vino, birra e alcolici con alveari interni; vassoi wrap-around per linee di confezionamento automatiche.</p></article>
+      <article class="sector reveal"><span class="mono">02</span><h3 data-i18n="st2t">Vetreria e imbottigliamento</h3><p data-i18n="st2p">Separatori e alveari dimensionati sul vetro, per proteggere bottiglie e contenitori durante trasporto e stoccaggio.</p></article>
+      <article class="sector reveal"><span class="mono">03</span><h3 data-i18n="st3t">Cosmetica e farmaceutica</h3><p data-i18n="st3p">Alveari per flaconi e ampolle, scatole stampate in alta definizione, controlli di igiene e qualità certificati.</p></article>
+      <article class="sector reveal"><span class="mono">04</span><h3 data-i18n="st4t">Elettronica</h3><p data-i18n="st4p">Micro alveari e interni fustellati per componenti e dispositivi, con precisione di taglio da linee automatiche.</p></article>
+      <article class="sector reveal"><span class="mono">05</span><h3 data-i18n="st5t">Industria e grandi formati</h3><p data-i18n="st5p">Scatole di grandi dimensioni a doppia onda, maxi alveari, interfalde e pallet in cartone per prodotti voluminosi.</p></article>
+      <article class="sector reveal"><span class="mono">06</span><h3 data-i18n="st6t">Retail e punto vendita</h3><p data-i18n="st6p">Espositori automontanti, Pack&amp;Show con fondo e coperchio preincollati, stampa offset per il massimo impatto a scaffale.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- qualità -->
+<section class="section section-dark" id="qualita">
+  <div class="container">
+    <div class="quality-grid">
+      <div>
+        <span class="eyebrow mono reveal" data-i18n="q_e">Qualità, energia, ambiente</span>
+        <h2 class="h2 reveal"><span data-i18n="q_t">Certificati per garantirvi regole, igiene e sicurezza.</span></h2>
+        <p class="lead reveal" data-i18n="q_p">La qualità dei nostri prodotti è certificata da severi controlli, sia interni che da parte di auditor esterni. I nostri stabilimenti mantengono costante l'attenzione alle direttive in materia di energia, ambiente e sicurezza: gli imballi vengono realizzati con materie prime certificate e riciclabili, utilizzando con attenzione le risorse energetiche ed evitando sprechi.</p>
+        <div class="badges reveal">
+          <div class="badge"><b>ISO 9001</b><span>UNI EN ISO 9001:2015</span></div>
+          <div class="badge"><b>FSC®</b><span>Chain-of-Custody</span></div>
+          <div class="badge"><b>100%</b><span data-i18n="q_b3">Cartone riciclabile</span></div>
+        </div>
+      </div>
+      <div class="quality-media reveal">
+        <img src="assets/factory-bobst.jpg" alt="Linea di trasformazione BOBST">
+        <div class="quote mono"><span data-i18n="q_q">«…per fare tutto ci vuole un fiore!»</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- sedi -->
+<section class="section section-light" id="sedi">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow mono reveal" data-i18n="sd_e">Le sedi</span>
+      <h2 class="h2 reveal"><span data-i18n="sd_t">Quattro sedi tra Napoli e Avellino.</span></h2>
+    </div>
+    <div class="sites">
+      <div class="site reveal"><span class="mono" data-i18n="sd_l">Sede legale</span><h3>Casavatore (NA)</h3><p>Viale Guglielmo Marconi n. 207<br>80020 Casavatore</p><a class="link-arrow" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Viale+Guglielmo+Marconi+207+80020+Casavatore+NA" data-i18n="sd_map">Apri in Google Maps</a></div>
+      <div class="site reveal"><span class="mono" data-i18n="sd_o">Sede operativa</span><h3>Aiello del Sabato (AV)</h3><p>S.P. 64<br>83020 Aiello del Sabato</p><a class="link-arrow" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Full+Pack+Aiello+del+Sabato+AV" data-i18n="sd_map">Apri in Google Maps</a></div>
+      <div class="site reveal"><span class="mono" data-i18n="sd_o">Sede operativa</span><h3>Nusco (AV)</h3><p>C.da Fiorentino, snc<br>83051 Nusco</p><a class="link-arrow" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Contrada+Fiorentino+83051+Nusco+AV" data-i18n="sd_map">Apri in Google Maps</a></div>
+      <div class="site reveal"><span class="mono" data-i18n="sd_o">Sede operativa</span><h3>Torre Le Nocelle (AV)</h3><p>C.da Campoceraso, Area PIP, snc<br>83030 Torre Le Nocelle</p><a class="link-arrow" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Contrada+Campoceraso+Area+PIP+83030+Torre+Le+Nocelle+AV" data-i18n="sd_map">Apri in Google Maps</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- calcolatore sviluppo -->
+<section class="section section-light" id="calcolatore">
+  <div class="container">
+    <div class="section-head split">
+      <div>
+        <span class="eyebrow mono reveal" data-i18n="ca_e">Strumento</span>
+        <h2 class="h2 reveal"><span data-i18n="ca_t">Calcola lo sviluppo della vostra cassa americana.</span></h2>
+      </div>
+      <p class="lead reveal" data-i18n="ca_p">Inserite le misure interne e l'onda: ottenete lo sviluppo piano FEFCO 0201 con le maggiorazioni di cordonatura, la superficie di cartone e il peso indicativo. Un punto di partenza per il preventivo.</p>
+    </div>
+    <div class="calc reveal">
+      <form class="calc-form" id="calc-form" onsubmit="return false">
+        <label><span class="mono" data-i18n="ca_l">Lunghezza interna L (mm)</span><input type="number" id="c-l" value="400" min="80" max="2000" step="1"></label>
+        <label><span class="mono" data-i18n="ca_w">Larghezza interna W (mm)</span><input type="number" id="c-w" value="300" min="60" max="1500" step="1"></label>
+        <label><span class="mono" data-i18n="ca_h">Altezza interna H (mm)</span><input type="number" id="c-h" value="300" min="50" max="1500" step="1"></label>
+        <label><span class="mono" data-i18n="ca_f">Onda</span>
+          <select id="c-f">
+            <option value="E" data-t="1.5" data-g="420">E — microonda 1,5 mm</option>
+            <option value="B" data-t="3" data-g="480">B — 3 mm</option>
+            <option value="C" data-t="4" data-g="520" selected>C — 4 mm</option>
+            <option value="EB" data-t="4.5" data-g="700">EB — doppia onda 4,5 mm</option>
+            <option value="BC" data-t="7" data-g="800">BC — doppia onda 7 mm</option>
+          </select>
+        </label>
+        <label><span class="mono" data-i18n="ca_q">Quantità</span><input type="number" id="c-q" value="1000" min="1" step="1"></label>
+      </form>
+      <div class="calc-out">
+        <svg class="blank-svg" id="blank-svg" viewBox="0 0 1000 420" aria-label="Sviluppo piano FEFCO 0201"></svg>
+        <dl class="calc-stats mono">
+          <div><dt data-i18n="ca_s1">Sviluppo (L × W)</dt><dd id="o-blank">—</dd></div>
+          <div><dt data-i18n="ca_s2">Cartone per cassa</dt><dd id="o-area">—</dd></div>
+          <div><dt data-i18n="ca_s3">Peso indicativo</dt><dd id="o-mass">—</dd></div>
+          <div><dt data-i18n="ca_s4">Cartone per il lotto</dt><dd id="o-lot">—</dd></div>
+        </dl>
+        <p class="calc-note" data-i18n="ca_n">Formula: lunghezza = 2L + 2W + maggiorazioni di cordonatura (in funzione dello spessore) + linguetta 35 mm; larghezza = H + W + maggiorazioni. Grammature indicative per onda. Le misure definitive vengono confermate dal nostro ufficio tecnico in base a carta, stampa e linea di produzione.</p>
+        <a href="#preventivo" class="btn btn-solid" id="calc-to-quote" data-i18n="ca_b">Usa queste misure per il preventivo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- preventivo -->
+<section class="section section-dark" id="preventivo">
+  <div class="container quote-grid">
+    <div>
+      <span class="eyebrow mono reveal" data-i18n="q_e2">Richiesta di preventivo</span>
+      <h2 class="h2 reveal"><span data-i18n="q_t2">Diteci cosa dovete proteggere.</span></h2>
+      <p class="lead reveal" data-i18n="q_p2">Compilate i campi: il modulo prepara una email al nostro ufficio commerciale con tutti i dati, pronta da inviare dal vostro programma di posta. Rispondiamo con tempi, quantità minime e un preventivo puntuale.</p>
+      <ul class="specs mono reveal">
+        <li><span>Email</span><b>info@fullpack.it</b></li>
+        <li><span>PBX</span><b>06 87501019</b></li>
+        <li><span>Tel.</span><b>0824 1716723</b></li>
+      </ul>
+    </div>
+    <form class="quote-form reveal" id="quote-form">
+      <label><span class="mono" data-i18n="qf_co">Azienda</span><input type="text" name="azienda" required autocomplete="organization"></label>
+      <label><span class="mono" data-i18n="qf_nm">Referente</span><input type="text" name="nome" required autocomplete="name"></label>
+      <label><span class="mono">Email</span><input type="email" name="email" required autocomplete="email"></label>
+      <label><span class="mono" data-i18n="qf_tel">Telefono</span><input type="tel" name="telefono" autocomplete="tel"></label>
+      <label><span class="mono" data-i18n="qf_pr">Prodotto</span>
+        <select name="prodotto">
+          <option data-i18n="pr1t">Casse americane</option><option data-i18n="pr2t">Fustellati</option><option data-i18n="pr3t">Espositori e imballaggi speciali</option><option data-i18n="pr4t">Scatole di grandi dimensioni</option><option data-i18n="pr5t">Alveari</option><option data-i18n="pr6t">Interfalde e fogli in cartone</option><option data-i18n="qf_ot">Altro / da definire</option>
+        </select>
+      </label>
+      <label><span class="mono" data-i18n="qf_dim">Misure interne L × W × H (mm)</span><input type="text" name="misure" id="q-dim" placeholder="400 × 300 × 300"></label>
+      <label><span class="mono" data-i18n="ca_f">Onda</span><select name="onda" id="q-flute"><option>E</option><option>B</option><option selected>C</option><option>EB</option><option>BC</option><option data-i18n="qf_any">Da consigliare</option></select></label>
+      <label><span class="mono" data-i18n="ca_q">Quantità</span><input type="number" name="quantita" id="q-qty" min="1" placeholder="1000"></label>
+      <label><span class="mono" data-i18n="qf_col">Colori di stampa</span><select name="colori"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+      <label class="wide"><span class="mono" data-i18n="qf_nt">Note (prodotto da imballare, peso, stampa, consegna)</span><textarea name="note" rows="4"></textarea></label>
+      <label class="check"><input type="checkbox" name="privacy" required><span data-i18n="qf_pv">Acconsento al trattamento dei dati per rispondere alla richiesta (Reg. UE 2016/679).</span></label>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-solid" data-i18n="qf_send">Prepara la email</button>
+        <button type="button" class="btn btn-ghost" id="quote-copy" data-i18n="qf_copy">Copia la richiesta</button>
+        <span class="form-msg mono" id="quote-msg"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- faq -->
+<section class="section section-light" id="faq">
+  <div class="container faq-grid">
+    <div>
+      <span class="eyebrow mono reveal" data-i18n="fq_e">Domande frequenti</span>
+      <h2 class="h2 reveal"><span data-i18n="fq_t">Risposte dirette, per partire con il piede giusto.</span></h2>
+    </div>
+    <div class="faq reveal">
+      <details open><summary data-i18n="fq1q">Quali informazioni servono per un preventivo?</summary><p data-i18n="fq1a">Misure interne (L × W × H), tipo di cassa o fustellato, onda desiderata o peso del contenuto, quantità, numero di colori di stampa e luogo di consegna. Il calcolatore qui sopra vi aiuta a stimare lo sviluppo.</p></details>
+      <details><summary data-i18n="fq2q">In quali formati inviare la grafica per la stampa?</summary><p data-i18n="fq2a">File vettoriali (PDF o AI) con testi in tracce e colori in tinta piatta o quadricromia. Il nostro ufficio tecnico prepara il tracciato fustella e verifica la resa su cartone prima di realizzare i cliché.</p></details>
+      <details><summary data-i18n="fq3q">Che tipi di onda producete?</summary><p data-i18n="fq3a">Onde N, E, B e C in onda singola, EB, BC e BCH in doppia e tripla onda, con copertine kraft, bianche, patinate o verniciate e carte certificate FSC® Chain-of-Custody.</p></details>
+      <details><summary data-i18n="fq4q">Fate anche piccole quantità e campioni?</summary><p data-i18n="fq4a">Sì: sviluppiamo campioni e piccole serie per validare l'imballo prima della produzione. Quantità minime e tempi dipendono dal prodotto e vengono indicati nel preventivo.</p></details>
+      <details><summary data-i18n="fq5q">Come vengono consegnate le casse?</summary><p data-i18n="fq5a">Piatte, in pacchi reggiati su bancali EPAL avvolti con film estensibile, con il nostro servizio di consegna dalle sedi di Napoli e Avellino.</p></details>
+      <details><summary data-i18n="fq6q">Quali certificazioni avete?</summary><p data-i18n="fq6a">Sistema qualità UNI EN ISO 9001:2015 e catena di custodia FSC®; gli stabilimenti applicano le direttive su energia, ambiente e sicurezza con controlli periodici.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- contatti / cta -->
+<section class="section section-cta" id="contatti">
+  <div class="container cta">
+    <div>
+      <span class="eyebrow mono reveal" data-i18n="c_e">Contatti</span>
+      <h2 class="h2 reveal"><span data-i18n="c_t">Parliamo del vostro prossimo imballaggio.</span></h2>
+      <p class="lead reveal" data-i18n="c_p">Inviateci misure, quantità e un'idea del prodotto: vi proponiamo la soluzione più adatta e un preventivo puntuale.</p>
+    </div>
+    <div class="cta-links reveal">
+      <a href="mailto:info@fullpack.it" class="cta-link"><span class="mono">Email</span><b>info@fullpack.it</b></a>
+      <a href="tel:+390687501019" class="cta-link"><span class="mono">PBX · 6 linee</span><b>06 87501019</b></a>
+      <a href="tel:+3908241716723" class="cta-link"><span class="mono">Tel.</span><b>0824 1716723</b></a>
+      <div class="cta-link"><span class="mono">Fax</span><b>0824 1712062</b></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo-white.png" alt="Full Pack">
+      <p class="mono" data-i18n="f_tag">proteggiamo le vostre idee</p>
+    </div>
+    <div class="footer-col">
+      <span class="mono" data-i18n="f_c1">Azienda</span>
+      <a href="#azienda" data-i18n="n1">Azienda</a><a href="#processo" data-i18n="n3">Processo</a><a href="#settori" data-i18n="n7">Settori</a><a href="#qualita" data-i18n="n4">Qualità</a><a href="#sedi" data-i18n="n5">Sedi</a><a href="assets/fullpack-brochure.pdf" download data-i18n="f_br">Brochure (PDF)</a>
+    </div>
+    <div class="footer-col">
+      <span class="mono" data-i18n="f_c2">Prodotti</span>
+      <a href="#prodotti" data-i18n="pr1t">Casse americane</a><a href="#prodotti" data-i18n="pr2t">Fustellati</a><a href="#prodotti" data-i18n="pr5t">Alveari</a><a href="#prodotti" data-i18n="pr8t">Pre-Print</a>
+    </div>
+    <div class="footer-col">
+      <span class="mono">Full Pack S.r.l.</span>
+      <p>Viale Guglielmo Marconi 207<br>80020 Casavatore (NA)</p>
+      <p>P.IVA 01665060628<br><span data-i18n="f_cap">Capitale sociale</span> € 1.000.000,00</p>
+    </div>
+  </div>
+  <div class="container footer-bottom mono">
+    <span>© <span id="year"></span> Full Pack S.r.l.</span>
+    <span><a href="#privacy" data-i18n="f_pr">Privacy</a> · www.fullpack.it · info@fullpack.it</span>
+  </div>
+  <div class="container privacy mono" id="privacy"><span data-i18n="f_prt">Informativa sintetica: i dati inseriti nel modulo di richiesta preventivo vengono usati esclusivamente per rispondere alla richiesta e non sono memorizzati da questo sito, che non utilizza cookie di profilazione (solo la preferenza di lingua nel browser). Titolare: Full Pack S.r.l., info@fullpack.it.</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
